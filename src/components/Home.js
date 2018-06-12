@@ -8,12 +8,12 @@ const Home = props => (
       <h1>Welcome to Maximum_Effort!</h1>
       <Well>
         <ul>
-          <li>Butts?</li>
-          <li>More butts?</li>
-          <li>Fewer butts?</li>
+          <li>Traveling somewhere and want the inside scoop on locales?</li>
+          <li>Know a particularly good location in your area?</li>
+          <li>Want to meet up with a group for an event?</li>
         </ul>
       </Well>
-      <p>Maximum_Effort will help you find butts!</p>
+      <p>Maximum_Effort is here for your needs!</p>
     </Grid>
   </Jumbotron>
 );

@@ -1,7 +1,6 @@
 import React from "react";
 import { Navbar, NavItem, Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-//import Beard from "./Beard.js";
 
 const Header = props => {
   return (
@@ -15,10 +14,10 @@ const Header = props => {
       </Navbar.Header>
       <Nav pullRight>
         <LinkContainer exact to="/signup">
-          <NavItem eventKey={2}>Sign Up</NavItem>
+          <NavItem eventKey={1}>Sign Up</NavItem>
         </LinkContainer>
         <LinkContainer to="/login">
-          <NavItem eventKey={3}>Log in</NavItem>
+          <NavItem eventKey={2}>Log in</NavItem>
         </LinkContainer>
       </Nav>
     </Navbar>

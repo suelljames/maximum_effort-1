@@ -10,18 +10,11 @@ import User from "./User.js";
 import Profiles from "./ProfileList.js";
 import Area from "./Area.js";
 import Reviews from "./Reviews.js";
-// import services from "../service";
 import "./app.css";
 /****** </INITIAL IMPORT STATEMENTS> ******/
 
-/****** <CODE MAYBE FOR DATABASING /> ******/
-// const mapDispatchToProps = dispatch => ({
-//   onLoad: payload => dispatch({ type: "LOAD_DWARF", payload })
-// });
-
-/****** <RENDER THE PAGE /> ******/
+/****** <ROUTING THE PAGES /> ******/
 const App = ({ onLoad }) => {
-  // services.dwarves.all().then(dwrf => onLoad(dwrf));
   return (
     <div className="page">
       <Header />
@@ -37,13 +30,5 @@ const App = ({ onLoad }) => {
     </div>
   );
 };
-
-/****** <CODE MAYBE FOR DATABASING /> ******/
-// export default withRouter(
-//   connect(
-//     null,
-//     mapDispatchToProps
-//   )(App)
-// );
 
 export default App;
