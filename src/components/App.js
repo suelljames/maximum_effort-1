@@ -7,7 +7,7 @@ import Home from "./Home.js";
 import SignUp from "./SignUp.js";
 import LogIn from "./LogIn.js";
 // import services from "../service";
-import "./app.css";
+// import "./app.css";
 /****** </INITIAL IMPORT STATEMENTS> ******/
 
 /****** <CODE MAYBE FOR DATABASING /> ******/
@@ -30,9 +30,12 @@ const App = ({ onLoad }) => {
   );
 };
 
-export default withRouter(
-  connect(
-    null,
-    mapDispatchToProps
-  )(App)
-);
+/****** <CODE MAYBE FOR DATABASING /> ******/
+// export default withRouter(
+//   connect(
+//     null,
+//     mapDispatchToProps
+//   )(App)
+// );
+
+export default App;

@@ -9,11 +9,10 @@ import rootReducer from "./reducers/index.js";
 import "bootstrap/dist/css/bootstrap.css";
 /****** </INITIAL IMPORT STATEMENTS> ******/
 
-/****** <CODE MAYBE FOR DATABASING /> ******/
-// const store = createStore(
-//   rootReducer,
-//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-// );
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
   <Provider store={store}>
