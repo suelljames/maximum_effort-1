@@ -25,7 +25,7 @@ const Reviews = props => {
         <Form horizontal onSubmit={event => submitForm(event)}>
           <FormGroup>
             <Col smOffset={2} sm={6}>
-              <h3>List of reviews.</h3>
+              <h3>A review.</h3>
             </Col>
           </FormGroup>
 
