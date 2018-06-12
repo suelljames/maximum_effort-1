@@ -13,24 +13,37 @@ import {
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-const SignUp = props => {
-  let submitForm = event => {
+const Area = props => {
+  let goHome = event => {
     event.preventDefault();
     props.history.push("/user");
+  };
+
+  let findReviews = event => {
+    event.preventDefault();
+    props.history.push("/reviews");
   };
 
   return (
     <Jumbotron>
       <Grid>
-        <Form horizontal onSubmit={event => submitForm(event)}>
+        <Form horizontal>
           <FormGroup>
             <Col smOffset={2} sm={6}>
-              <h3>Sign up.</h3>
+              <h3>Area map.</h3>
             </Col>
           </FormGroup>
 
           <Col smOffset={2} sm={6}>
-            <Button type="submit">Submit</Button>
+            <Button type="submit" onClick={event => goHome(event)}>
+              User Home
+            </Button>
+          </Col>
+
+          <Col smOffset={2} sm={6}>
+            <Button type="submit" onClick={event => findReviews(event)}>
+              Local Reviews
+            </Button>
           </Col>
         </Form>
       </Grid>
@@ -38,4 +51,4 @@ const SignUp = props => {
   );
 };
 
-export default withRouter(SignUp);
+export default withRouter(Area);

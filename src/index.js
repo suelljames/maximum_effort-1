@@ -5,12 +5,12 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import App from "./components/App.js";
-import rootReducer from "./reducers/index.js";
+// import rootReducer from "./reducers/index.js";
 import "bootstrap/dist/css/bootstrap.css";
 /****** </INITIAL IMPORT STATEMENTS> ******/
 
 const store = createStore(
-  rootReducer,
+  // rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 

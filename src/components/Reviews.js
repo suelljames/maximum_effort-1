@@ -13,10 +13,10 @@ import {
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-const SignUp = props => {
+const Reviews = props => {
   let submitForm = event => {
     event.preventDefault();
-    props.history.push("/user");
+    props.history.push("/area");
   };
 
   return (
@@ -25,12 +25,12 @@ const SignUp = props => {
         <Form horizontal onSubmit={event => submitForm(event)}>
           <FormGroup>
             <Col smOffset={2} sm={6}>
-              <h3>Sign up.</h3>
+              <h3>List of reviews.</h3>
             </Col>
           </FormGroup>
 
           <Col smOffset={2} sm={6}>
-            <Button type="submit">Submit</Button>
+            <Button type="submit">Area</Button>
           </Col>
         </Form>
       </Grid>
@@ -38,4 +38,4 @@ const SignUp = props => {
   );
 };
 
-export default withRouter(SignUp);
+export default withRouter(Reviews);
