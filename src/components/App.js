@@ -10,6 +10,7 @@ import User from "./User.js";
 import Profiles from "./ProfileList.js";
 import Area from "./Area.js";
 import Reviews from "./Reviews.js";
+import Profile from "./Profile.js";
 import "./app.css";
 /****** </INITIAL IMPORT STATEMENTS> ******/
 
@@ -26,6 +27,7 @@ const App = ({ onLoad }) => {
         <Route path="/profiles" component={Profiles} />
         <Route path="/area" component={Area} />
         <Route path="/reviews" component={Reviews} />
+        <Route path="/profiletemp" component={Profile} />
       </div>
     </div>
   );
