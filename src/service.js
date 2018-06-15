@@ -16,7 +16,10 @@ const requests = {
 
 const profiles = {
   all: page => requests.get(`/profiles`),
-  add: payload => requests.post(`/profiles`, payload),
+  add: payload => {
+    console.log(payload);
+    requests.post(`/profiles`, payload);
+  },
   delete: id => requests.delete(`/profiles/${id}`)
 };
 

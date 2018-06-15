@@ -5,5 +5,6 @@ import profiles from "./userProfiles.js";
 /****** </INITIAL IMPORT STATEMENTS> ******/
 
 export default combineReducers({
-  interests
+  interests,
+  profiles
 });

@@ -5,6 +5,7 @@ let profileID = 0;
 const profiles = (state = [], action) => {
   switch (action.type) {
     case "ADD_PROFILE":
+      console.log(action.payload);
       profileID++;
       services.profiles.add({ ...action.payload });
       return [...state, { ...action.payload, _id: profileID }];
@@ -22,3 +23,5 @@ const profiles = (state = [], action) => {
       return state;
   }
 };
+
+export default profiles;
