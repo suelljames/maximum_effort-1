@@ -12,6 +12,7 @@ import {
 } from "react-bootstrap";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import MapWithAMarker from "./Maps.js";
 
 const Area = props => {
   let goHome = event => {
@@ -27,25 +28,28 @@ const Area = props => {
   return (
     <Jumbotron>
       <Grid>
-        <Form horizontal>
-          <FormGroup>
-            <Col smOffset={2} sm={6}>
-              <h3>Area map.</h3>
-            </Col>
-          </FormGroup>
+        <Col smOffset={2} sm={6}>
+          <h3>Area map.</h3>
+          <div
+            style={{
+              float: "right"
+            }}
+          >
+            <MapWithAMarker />
+          </div>
+        </Col>
 
-          <Col smOffset={2} sm={6}>
-            <Button type="submit" onClick={event => goHome(event)}>
-              User Home
-            </Button>
-          </Col>
+        <Col smOffset={2} sm={6}>
+          <Button type="submit" onClick={event => goHome(event)}>
+            User Home
+          </Button>
+        </Col>
 
-          <Col smOffset={2} sm={6}>
-            <Button type="submit" onClick={event => findReviews(event)}>
-              Local Reviews
-            </Button>
-          </Col>
-        </Form>
+        <Col smOffset={2} sm={6}>
+          <Button type="submit" onClick={event => findReviews(event)}>
+            Local Reviews
+          </Button>
+        </Col>
       </Grid>
     </Jumbotron>
   );

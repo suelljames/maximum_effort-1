@@ -7,6 +7,7 @@ import { createStore } from "redux";
 import App from "./components/App.js";
 import rootReducer from "./reducers/index.js";
 import "bootstrap/dist/css/bootstrap.css";
+import MapWithAMarker from "./components/Maps";
 /****** </INITIAL IMPORT STATEMENTS> ******/
 
 const store = createStore(
@@ -17,7 +18,9 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <App />
+      <div>
+        <App />
+      </div>
     </Router>
   </Provider>,
   document.getElementById("root")
