@@ -26,16 +26,16 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const SignUp = ({ addProfile, history, interests }) => {
-  let nameFirst;
-  let nameLast;
-  let nameUser;
-  let dateBirth;
-  let homeCity;
-  let homeState;
-  let homeZip;
-  let email;
-  let password;
-  let interest;
+  let nameFirst,
+    nameLast,
+    nameUser,
+    dateBirth,
+    homeCity,
+    homeState,
+    homeZip,
+    email,
+    password,
+    interest;
 
   let submitForm = event => {
     event.preventDefault();
