@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_ROOT = "https://maximum-effort-server.herokuapp.com/api";
+//const API_ROOT = "https://maximum-effort-server.herokuapp.com/api";
+const API_ROOT = "http://localhost:8080/api";
 
 const responseData = res => res.data;
 

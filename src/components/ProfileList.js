@@ -29,6 +29,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const Profiles = props => {
+  props.getProfiles();
   let goHome = event => {
     event.preventDefault();
     props.history.push("/user");
@@ -80,4 +81,9 @@ const Profiles = props => {
   );
 };
 
-export default withRouter(Profiles);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Profiles)
+);
