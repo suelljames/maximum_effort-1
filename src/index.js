@@ -5,9 +5,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import App from "./components/App.js";
+import MapWithASearchBox from "./components/Maps";
 import rootReducer from "./reducers/index.js";
 import "bootstrap/dist/css/bootstrap.css";
-import MapWithAMarker from "./components/Maps";
 /****** </INITIAL IMPORT STATEMENTS> ******/
 
 const store = createStore(

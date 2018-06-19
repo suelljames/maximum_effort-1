@@ -11,7 +11,7 @@ import Profiles from "./ProfileList.js";
 import Area from "./Area.js";
 import Reviews from "./Reviews.js";
 import Profile from "./Profile.js";
-import MapWithAMarker from "./Maps";
+// import MapWithASearchBox from "./Maps";
 import "./app.css";
 /****** </INITIAL IMPORT STATEMENTS> ******/
 

@@ -7,10 +7,11 @@
     "axios": "^0.18.0",
     "bootstrap": "^3.3.7",
     "google-map-react": "^1.0.4",
+    "google-maps-react": "^2.0.2",
     "lodash": "^4.17.10",
-    "react": "^16.4.0",
+    "react": "^15.6.1",
     "react-bootstrap": "^0.32.1",
-    "react-dom": "^16.4.0",
+    "react-dom": "^15.6.1",
     "react-google-maps": "^9.4.5",
     "react-js-google-maps": "^1.5.2",
     "react-redux": "^5.0.7",
@@ -19,7 +20,7 @@
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^4.0.8",
     "react-scripts": "1.1.4",
-    "redux": "^4.0.0",
+    "redux": "^3.7.0",
     "reselect": "^3.0.1"
   },
   "devDependencies": {

@@ -12,7 +12,7 @@ import {
 } from "react-bootstrap";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import MapWithAMarker from "./Maps.js";
+import MapWithASearchBox from "./Maps.js";
 
 const Area = props => {
   let goHome = event => {
@@ -35,7 +35,8 @@ const Area = props => {
               float: "right"
             }}
           >
-            <MapWithAMarker />
+            <MapWithASearchBox />
+            _______________________________________________________________________________________________________________________
           </div>
         </Col>
 

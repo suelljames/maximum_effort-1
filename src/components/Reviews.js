@@ -35,10 +35,12 @@ const Reviews = props => {
     </Jumbotron>
   );
 };
-<ul>
+{
+  /* <ul>
   <ListItemLink to="/somewhere" />
   <ListItemLink to="/somewhere-else" />
-</ul>;
+</ul>; */
+}
 const ListItemLink = ({ to, ...rest }) => (
   <Route
     path={to}
