@@ -30,7 +30,8 @@ const Profile = ({ history, profiles, match }) => {
               <Panel.Body>
                 UserName: {myProfo.nameUser}
                 <br />
-                Email: {myProfo.email}
+                {/* added email link to generate template email */}
+                Email: <a href={`mailto:${myProfo.email}`}>{myProfo.email}</a>
                 <br />
                 Interests: {myProfo.interest}
               </Panel.Body>
