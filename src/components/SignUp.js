@@ -30,9 +30,9 @@ const SignUp = ({ addProfile, history, interests }) => {
     nameLast,
     nameUser,
     dateBirth,
-    homeCity,
-    homeState,
-    homeZip,
+    City,
+    State,
+    Zip,
     email,
     password,
     interest;
@@ -45,9 +45,9 @@ const SignUp = ({ addProfile, history, interests }) => {
       nameLast: nameLast.value,
       nameUser: nameUser.value,
       dateBirth: dateBirth.value,
-      homeCity: homeCity.value,
-      homeState: homeState.value,
-      homeZip: homeZip.value,
+      City: City.value,
+      State: State.value,
+      Zip: Zip.value,
       email: email.value,
       password: password.value,
       interest: interest.value
@@ -117,7 +117,7 @@ const SignUp = ({ addProfile, history, interests }) => {
                 type="city"
                 required
                 inputRef={ref => {
-                  homeCity = ref;
+                  City = ref;
                 }}
               />
             </Col>
@@ -128,10 +128,10 @@ const SignUp = ({ addProfile, history, interests }) => {
             <Col sm={6}>
               <FormControl
                 placeholder="State"
-                type="text"
+                type="state"
                 required
                 inputRef={ref => {
-                  homeState = ref;
+                  State = ref;
                 }}
               />
             </Col>
@@ -145,7 +145,7 @@ const SignUp = ({ addProfile, history, interests }) => {
                 type="zip"
                 required
                 inputRef={ref => {
-                  homeZip = ref;
+                  Zip = ref;
                 }}
               />
             </Col>
