@@ -15,7 +15,7 @@ import { withRouter } from "react-router-dom";
 import MapWithASearchBox from "./Maps.js";
 import Reviews from "./Reviews.js";
 import Review from "./Review.js";
-import WriteReview from "./WriteReview.js";
+
 const Area = props => {
   let goHome = event => {
     event.preventDefault();
@@ -35,7 +35,11 @@ const Area = props => {
           {/* Removing the "div" and style within the Div, fixed
               the issue with the underscore expanding the page and
               allowed map to display as normal.  --James */}
-          <Reviews />
+          <Reviews>
+            style={{
+              aligncontent: "right"
+            }}
+          </Reviews>
 
           <MapWithASearchBox />
         </Col>
@@ -48,11 +52,11 @@ const Area = props => {
           </Button>
         </Col>
 
-        {/* <Col smOffset={2} sm={-10}>
+        <Col smOffset={2} sm={-10}>
           <Button type="submit" onClick={event => findReviews(event)}>
             Local Reviews
           </Button>
-        </Col> */}
+        </Col>
 
         {/* <Col smOffset={2} sm={6}>
           <Button type="submit" onClick={event => goWriteReview(event)}>
