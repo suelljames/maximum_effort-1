@@ -98,8 +98,9 @@ const SignUp = ({ addProfile, history, interests }) => {
             <Col sm={2} componentClass={ControlLabel} />
             <Col sm={6}>
               <FormControl
-                placeholder="Birth datte"
-                type="text"
+                //Changed type from text to date =, allowing user to input birthdate//
+                placeholder="Birth date"
+                type="date"
                 required
                 inputRef={ref => {
                   dateBirth = ref;
@@ -112,8 +113,8 @@ const SignUp = ({ addProfile, history, interests }) => {
             <Col sm={2} componentClass={ControlLabel} />
             <Col sm={6}>
               <FormControl
-                placeholder="Home city"
-                type="text"
+                placeholder="City"
+                type="city"
                 required
                 inputRef={ref => {
                   homeCity = ref;
@@ -126,7 +127,7 @@ const SignUp = ({ addProfile, history, interests }) => {
             <Col sm={2} componentClass={ControlLabel} />
             <Col sm={6}>
               <FormControl
-                placeholder="Home state"
+                placeholder="State"
                 type="text"
                 required
                 inputRef={ref => {
@@ -140,8 +141,8 @@ const SignUp = ({ addProfile, history, interests }) => {
             <Col sm={2} componentClass={ControlLabel} />
             <Col sm={6}>
               <FormControl
-                placeholder="Home zip code"
-                type="text"
+                placeholder="Zip Code"
+                type="zip"
                 required
                 inputRef={ref => {
                   homeZip = ref;
@@ -167,9 +168,12 @@ const SignUp = ({ addProfile, history, interests }) => {
           <FormGroup>
             <Col sm={2} componentClass={ControlLabel} />
             <Col sm={6}>
+              {/* Set Type for E-mail to E-mail. So now it gives you an error if its not in email format. 
+          Ex: Deku.Acadamia@yahoo.com=(Will Work)
+          Ex: Deku.acadamiayahoo.com=(Will not Work) */}
               <FormControl
                 placeholder="E-mail"
-                type="text"
+                type="email"
                 required
                 inputRef={ref => {
                   email = ref;
@@ -182,8 +186,23 @@ const SignUp = ({ addProfile, history, interests }) => {
             <Col sm={2} componentClass={ControlLabel} />
             <Col sm={6}>
               <FormControl
+                //Changed the type to Password to mask users password credentials
                 placeholder="Password"
-                type="text"
+                type="password"
+                required
+                inputRef={ref => {
+                  password = ref;
+                }}
+              />
+            </Col>
+          </FormGroup>
+
+          <FormGroup>
+            <Col sm={2} componentClass={ControlLabel} />
+            <Col sm={6}>
+              <FormControl
+                placeholder="Confirm Password"
+                type="confirm"
                 required
                 inputRef={ref => {
                   password = ref;
