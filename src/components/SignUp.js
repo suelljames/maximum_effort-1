@@ -35,25 +35,30 @@ const SignUp = ({ addProfile, history, interests }) => {
     Zip,
     email,
     password,
+    confirmPassword,
     interest;
 
   let submitForm = event => {
     event.preventDefault();
 
-    addProfile({
-      nameFirst: nameFirst.value,
-      nameLast: nameLast.value,
-      nameUser: nameUser.value,
-      dateBirth: dateBirth.value,
-      City: City.value,
-      State: State.value,
-      Zip: Zip.value,
-      email: email.value,
-      password: password.value,
-      interest: interest.value
-    });
-
-    history.push("/user");
+    if (password.value === confirmPassword.value) {
+      addProfile({
+        nameFirst: nameFirst.value,
+        nameLast: nameLast.value,
+        nameUser: nameUser.value,
+        dateBirth: dateBirth.value,
+        City: City.value,
+        State: State.value,
+        Zip: Zip.value,
+        email: email.value,
+        password: password.value,
+        interest: interest.value
+      });
+      //Added passwords not matching error message//
+      history.push("/area");
+    } else {
+      alert("Passwords must match");
+    }
   };
 
   return (
@@ -114,7 +119,7 @@ const SignUp = ({ addProfile, history, interests }) => {
             <Col sm={6}>
               <FormControl
                 placeholder="City"
-                type="city"
+                type="city.location"
                 required
                 inputRef={ref => {
                   City = ref;
@@ -196,16 +201,15 @@ const SignUp = ({ addProfile, history, interests }) => {
               />
             </Col>
           </FormGroup>
-
           <FormGroup>
             <Col sm={2} componentClass={ControlLabel} />
             <Col sm={6}>
               <FormControl
-                placeholder="Confirm Password"
-                type="confirm"
+                placeholder="Confirm password"
+                type="password"
                 required
                 inputRef={ref => {
-                  password = ref;
+                  confirmPassword = ref;
                 }}
               />
             </Col>
