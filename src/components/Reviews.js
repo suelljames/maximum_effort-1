@@ -22,7 +22,14 @@ const Reviews = ({ history, reviews }) => {
   };
 
   return (
-    <Jumbotron>
+    <Jumbotron
+      //Added style to align on the left-side of the webpage
+      style={{
+        position: "relative",
+        right: "300px",
+        width: "790px"
+      }}
+    >
       <Col smOffset={2} sm={6}>
         <h3>Local Reviews.</h3>
       </Col>

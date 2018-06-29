@@ -78,8 +78,10 @@ const MapWithASearchBox = compose(
       <div
         style={{
           height: `400px`,
+          //Added and Adjusted the Width of the Map//
+          width: "550px",
           // position: "relative",
-          right: "-450px",
+          right: "-750px",
           bottom: "30px",
           position: "absolute",
           left: "500px",
