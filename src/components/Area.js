@@ -14,17 +14,21 @@ import {
 import { withRouter } from "react-router-dom";
 import MapWithASearchBox from "./Maps.js";
 import Reviews from "./Reviews.js";
-import Review from "./Review.js";
 
 const Area = props => {
   let goHome = event => {
     event.preventDefault();
-    props.history.push("/user");
+    props.history.push("/profiles");
   };
 
-  let findReviews = event => {
+  // let findReviews = event => {
+  //   event.preventDefault();
+  //   props.history.push("/reviews");
+  // };
+
+  let goWriteReview = event => {
     event.preventDefault();
-    props.history.push("/reviews");
+    props.history.push("/writereview");
   };
 
   return (
@@ -62,26 +66,34 @@ const Area = props => {
           </Button>
         </Col>
 
+        {/* // <Col smOffset={2} sm={-10}>
+        //   <Button
+        //     //Aligned Local Reviews below Userhome//
+        //     style={{
+        //       position: "relative",
+        //       right: "68px",
+        //       top: "530px"
+        //     }}
+        //     type="submit"
+        //     onClick={event => findReviews(event)}
+        //   >
+        //     Local Reviews
+        //   </Button>
+        // </Col> */}
+
         <Col smOffset={2} sm={-10}>
           <Button
-            //Aligned Local Reviews below Userhome//
             style={{
               position: "relative",
               right: "68px",
               top: "530px"
             }}
             type="submit"
-            onClick={event => findReviews(event)}
+            onClick={event => goWriteReview(event)}
           >
-            Local Reviews
-          </Button>
-        </Col>
-
-        {/* <Col smOffset={2} sm={6}>
-          <Button type="submit" onClick={event => goWriteReview(event)}>
             Create review
           </Button>
-        </Col> */}
+        </Col>
       </Grid>
     </Jumbotron>
   );

@@ -11,7 +11,23 @@ import {
 const Home = props => (
   <Jumbotron>
     <Grid>
-      <h1>Welcome to Maximum_Effort!</h1>
+      {/* Replaced "just text" H1 with a link attribute creating on click for "Welcome to Travocal" to link to the signup page  */}
+      <a
+        href="SignUp"
+        style={{
+          height: "150px",
+          width: "500px"
+        }}
+      >
+        <h1
+          style={{
+            color: "Black"
+          }}
+        >
+          {" "}
+          Welcome To Travocal
+        </h1>
+      </a>
       <Well>
         <ul>
           <li>Traveling somewhere and want the inside scoop on locales?</li>

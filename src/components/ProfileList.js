@@ -20,7 +20,7 @@ const mapStateToProps = state => ({
 const Profiles = ({ history, profiles }) => {
   let goHome = event => {
     event.preventDefault();
-    history.push("/user");
+    history.push("/area");
   };
 
   let goGoGadgetProfile = id => {

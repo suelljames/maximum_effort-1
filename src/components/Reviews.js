@@ -1,6 +1,7 @@
 import React from "react";
 import { Jumbotron, Grid, Col, Button, Panel } from "react-bootstrap";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 
 const mapStateToProps = state => ({
   reviews: state.reviews
@@ -26,7 +27,7 @@ const Reviews = ({ history, reviews }) => {
       //Added style to align on the left-side of the webpage
       style={{
         position: "relative",
-        right: "300px",
+        right: "400px",
         width: "790px"
       }}
     >
@@ -56,19 +57,14 @@ const Reviews = ({ history, reviews }) => {
           </Col>
         ))}
 
-        <Col smOffset={2} sm={6}>
+        {/* <Col smOffset={2} sm={6}>
           <Button type="submit" onClick={event => goWriteReview(event)}>
             Create review
           </Button>
-        </Col>
-        <Col smOffset={2} sm={6}>
-          <Button type="submit" onClick={event => goMap(event)}>
-            Go to map
-          </Button>
-        </Col>
+        </Col> */}
       </Grid>
     </Jumbotron>
   );
 };
 
-export default connect(mapStateToProps)(Reviews);
+export default withRouter(connect(mapStateToProps)(Reviews));
